@@ -24,7 +24,9 @@ The block diagram above represents the correct working of the model in that firs
 - Data is stored on the blockchain network.
 - Once the Medical Records are inserted then no one can modify them.
 - Safe and secure on the Blockchain Network
+
 ### 🌈 CONCLUSION
-The proposed solution is going to remove all sort of Unfairness which sometimes hospital staff does sometimes in order to manipulate the data.
+The proposed solution is going to remove all sorts of Unfairness which sometimes hospital staff does in order to manipulate the data.
+
 ### FUTURE PROSPECT
-To make our system more useful and convinient, we plan on adding whole management data inside this blockchain Network.
+- To make our system more useful and convinient, we plan on adding whole management data inside this blockchain Network.

@@ -8,21 +8,29 @@ def welcome():
     return "Welcome To Decentralised Medical Records"
 
 def addPatientRecord():
-  name = st.text_input("Enter your Full Name")
-  PhoneNumber = st.number_input("Enter your Phone Number", step=1, min_value=1)
-  age = st.number_input("Enter your Age", step=1, min_value=1)
-  gender = st.text_input("Male/Female/Prefer Not Say")
-  Hid = st.text_input("Enter your Health Id")
+  name = st.text_input("Enter Full Name of the Patient")
+  PhoneNumber = st.number_input("Enter the Contact Number", step=1, min_value=1)
+  age = st.number_input("Enter Age", step=1, min_value=1)
+  gender = st.text_input("Enter Gender")
+  Hid = st.text_input("Enter your Unique aadhar Id")
   Record=st.text_input("Enter the record details")
 
 
-  if st.button("Register Now"):
+  if st.button("Register Patient"):
     a = pytezos.using(shell = 'https://florencenet.smartpy.io', key='edskRxw1a6qfy3w3dsFyueoW9E6T1B5fqCVMfyTBGsGWPu1c7tukkM4s1gAoueebMy1HZA2jvSG8shtvQCaGEuDe3FgXH51LMu')
     contract = a.contract('KT1BdoSDUgkxzbAkwkTfQYzvjiK7s71rPogV')
 
     contract.addPatientRecord(age = age, gender = gender, name = name, PhoneNumber = PhoneNumber, Hid = Hid , Record=Record).with_amount(0).as_transaction().fill().sign().inject()   
 
+def ViewPatientRecord():
+  Hid = st.text_input("Enter Unique aadhar Id of Patient")
 
+
+  if st.button("View Records"):
+    a = pytezos.using(shell = 'https://florencenet.smartpy.io', key='edskRxw1a6qfy3w3dsFyueoW9E6T1B5fqCVMfyTBGsGWPu1c7tukkM4s1gAoueebMy1HZA2jvSG8shtvQCaGEuDe3FgXH51LMu')
+    contract = a.contract('KT1BdoSDUgkxzbAkwkTfQYzvjiK7s71rPogV')
+
+    contract.addPatientRecord(age = age, gender = gender, name = name, PhoneNumber = PhoneNumber, Hid = Hid , Record=Record).with_amount(0).as_transaction().fill().sign().inject()
 def main():
     
     st.set_page_config(page_title="Decentralised Health Records")
@@ -31,20 +39,19 @@ def main():
     st.markdown(
         """<div style="background-color:#e1f0fa;padding:10px">
                     <h1 style='text-align: center; color: #304189;font-family:Helvetica'><strong>
-                    Vaccine For All</strong></h1></div><br>""",
+                    Panjiyan</strong></h1></div><br>""",
         unsafe_allow_html=True,
     )
 
     st.markdown(
         """<p style='text-align: center;font-family:Helvetica;'>
-                   This project greatly decreases any chances of misuse of the vaccine. As Our country is facing a shortage of vaccine due to some unfaithful people who are responsible for lots of innocent deaths So to bring these malpractices to an end becomes our priority. We tried to help our nation by building a website that helps to track all the information of covid vaccine through blockchain technology.</p>""",
+                   This project greatly decreases any chances of misuse or the manipulation of the medical Records</p>""",
         unsafe_allow_html=True,
     )
 
     st.markdown(
         """<h3 style='text-align: center; color: white; font-family:'Lato';font-family:Helvetica;'>
-                   The proposed solution is going to help our nation overcome our vaccine shortage problem
-by keeping all the information decentralized and available to all. #VaxForAll.
+                   The proposed solution is going to help our nation in decreasing the crime related to the data manipulation in Medical records for there own benefits. #VaxForAll.
                    </h3>""",
         unsafe_allow_html=True,
     )
@@ -54,12 +61,15 @@ by keeping all the information decentralized and available to all. #VaxForAll.
 
     algo = st.sidebar.selectbox(
         "Select the Option", options=[
-          "Register Patient"
+          "Register Patient",
+          "View Patient Data"
           ]
     )
 
     if algo == "Register Patient":
         addPatientRecord()
+    if algo == "View Patient Data":
+        ViewPatientRecord()    
    
 if __name__ == "__main__":
   main()

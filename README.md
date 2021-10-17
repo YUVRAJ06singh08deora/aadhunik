@@ -20,15 +20,15 @@ The block diagram above represents the correct working of the model in that firs
 
 🔖How to run this application on your system?
  
-📍 Download all the files from The github.
-📍 Open the source code from the link given below 
+📍 Download all the files from The github.<br>
+📍 Open the source code from the link given below <br>
 And copy and make a new project on google collaboratory.
 
-💫Link of google collab -: https://colab.research.google.com/drive/1wXfXtnaVPDYnXjQSnd_TCzeN_DL2-M71?usp=sharing
+💫Link of google collab -: https://colab.research.google.com/drive/1wXfXtnaVPDYnXjQSnd_TCzeN_DL2-M71?usp=sharing<br>
 
-📍 Upload the app.py file which you downloaded from the GitHub.
-📍 Go to Runtime  and then select Run all over there.
-📍 In the very last module of the collaboratory you will be able to see the link named “Your web app can be accessed from this link” and a link will be there so then click on the link and hurray your Dapp is running in front of you.
+📍 Upload the app.py file which you downloaded from the GitHub.<br>
+📍 Go to Runtime  and then select Run all over there.<br>
+📍 In the very last module of the collaboratory you will be able to see the link named “Your web app can be accessed from this link” and a link will be there so then click on the link and hurray your Dapp is running in front of you.<br>
 
 ### Youtube Video
 

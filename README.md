@@ -3,7 +3,7 @@
 Blockchain has the ability to keep an incorruptible, decentralized, and transparent log of all patient data makes it a technology rife for security applications. Additionally, while blockchain is transparent it is also private, concealing the identity of any individual with complex and secure codes that can protect the sensitivity of medical data. The decentralized nature of the technology also allows patients, doctors, and healthcare providers to share the same information quickly and safely.
 
 ## 🗒️ Introduction
-This project greatly increases the efficiency of the hospital staff as a whole. The pandemic has led to a lot of hospitals being completely occupied, and the hostel staff overwhelmed. By not having to conduct manual routine checks on the drip levels and drip conditions of every patient, the workload of the hospital staff is exceedingly diminished. Automation in such essential tasks is the next step towards providing more efficient and convenient healthcare.
+This project effectively stores the hospital data on the blockchain network nowadays we see many Hospitals doing some fraud with the databases of the patients and manipulating it for their own good and sometimes the medical reports are even modified when someone gives bribes to the hospital staff so that they can modify the previously existing data so to keep all the data secure and transparent we have created a whole hospital management system on the blockchain network where it can be kept safe and it cannot be manipulated.
 
 ### 📚 Tech stack
 - SmartPy(For Smart Contracts)

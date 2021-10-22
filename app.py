@@ -24,13 +24,10 @@ def addPatientRecord():
 
 def ViewPatientRecord():
   Hid = st.text_input("Enter Unique aadhar Id of Patient")
-
-
   if st.button("View Records"):
-    a = pytezos.using(shell = 'https://florencenet.smartpy.io', key='edskRxw1a6qfy3w3dsFyueoW9E6T1B5fqCVMfyTBGsGWPu1c7tukkM4s1gAoueebMy1HZA2jvSG8shtvQCaGEuDe3FgXH51LMu')
-    contract = a.contract('KT1BdoSDUgkxzbAkwkTfQYzvjiK7s71rPogV')
-
-    contract.addPatientRecord(age = age, gender = gender, name = name, PhoneNumber = PhoneNumber, Hid = Hid , Record=Record).with_amount(0).as_transaction().fill().sign().inject()
+    usds = pytezos.using(shell = 'https://florencenet.smartpy.io').contract('KT1BdoSDUgkxzbAkwkTfQYzvjiK7s71rPogV')
+    st.text(usds.storage[Hid]['Record']())
+   
 def main():
     
     st.set_page_config(page_title="Decentralised Health Records")

@@ -42,3 +42,5 @@ The proposed solution is going to remove all sorts of Unfairness which sometimes
 
 ### FUTURE PROSPECT
 - To make our system more useful and convinient, we plan on adding whole management data inside this blockchain Network.
+### Contact Details
+Gmail - 06yuvraj2001singh@gmail.com

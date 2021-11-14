@@ -24,7 +24,7 @@ The block diagram above represents the correct working of the model in that firs
 📍 Open the source code from the link given below <br>
 And copy and make a new project on google collaboratory.
 
-💫Link of google collab -: https://colab.research.google.com/drive/1wXfXtnaVPDYnXjQSnd_TCzeN_DL2-M71?usp=sharing<br>
+💫Link of google collab -: https://github.com/YUVRAJ06singh08deora/BlockChain_Medical_Records/blob/main/Decentralised_medical_Records.ipynb<br>
 
 📍 Upload the app.py file which you downloaded from the GitHub.<br>
 📍 Go to Runtime  and then select Run all over there.<br>

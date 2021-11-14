@@ -1,8 +1,8 @@
 import streamlit as st
 from pytezos import pytezos
 
-pytezos = pytezos.using(shell = 'https://florencenet.smartpy.io', key='edskRxw1a6qfy3w3dsFyueoW9E6T1B5fqCVMfyTBGsGWPu1c7tukkM4s1gAoueebMy1HZA2jvSG8shtvQCaGEuDe3FgXH51LMu')
-contract = pytezos.contract('KT1BdoSDUgkxzbAkwkTfQYzvjiK7s71rPogV')
+pytezos = pytezos.using(shell = 'https://granadanet.smartpy.io', key='edskRn4MXH7DD9M9QiAKhKRNLCp4LU11iqEcNp6vSqNWB8qksLZckKgQZozdVuX4wum61fNwaesWjgtydm8f3h6NYggFAtPx4f')
+contract = pytezos.contract('KT1RNQMAx4WcKXqAXHyLcKa8CvGFEfvc8E42')
 
 def welcome():
     return "Welcome To Decentralised Medical Records"
@@ -17,15 +17,15 @@ def addPatientRecord():
 
 
   if st.button("Register Patient"):
-    a = pytezos.using(shell = 'https://florencenet.smartpy.io', key='edskRxw1a6qfy3w3dsFyueoW9E6T1B5fqCVMfyTBGsGWPu1c7tukkM4s1gAoueebMy1HZA2jvSG8shtvQCaGEuDe3FgXH51LMu')
-    contract = a.contract('KT1BdoSDUgkxzbAkwkTfQYzvjiK7s71rPogV')
+    a = pytezos.using(shell = 'https://granadanet.smartpy.io', key='edskRn4MXH7DD9M9QiAKhKRNLCp4LU11iqEcNp6vSqNWB8qksLZckKgQZozdVuX4wum61fNwaesWjgtydm8f3h6NYggFAtPx4f')
+    contract = a.contract('KT1RNQMAx4WcKXqAXHyLcKa8CvGFEfvc8E42')
 
     contract.addPatientRecord(age = age, gender = gender, name = name, PhoneNumber = PhoneNumber, Hid = Hid , Record=Record).with_amount(0).as_transaction().fill().sign().inject()   
 
 def ViewPatientRecord():
   Hid = st.text_input("Enter Unique aadhar Id of Patient")
   if st.button("View Records"):
-    usds = pytezos.using(shell = 'https://florencenet.smartpy.io').contract('KT1BdoSDUgkxzbAkwkTfQYzvjiK7s71rPogV')
+    usds = pytezos.using(shell = 'https://granadanet.smartpy.io').contract('KT1RNQMAx4WcKXqAXHyLcKa8CvGFEfvc8E42')
     st.text(usds.storage[Hid]['Record']())
    
 def main():
